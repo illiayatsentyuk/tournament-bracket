@@ -17,7 +17,7 @@ export default function CustomSeed({ seed, breakpoint, roundIndex }) {
 
   const startEditingScore = (score) => {
     setEditingScore(score);
-    setInputValue(score?.score || "");
+    setInputValue(score?.score || 0);
   };
 
   return (
