@@ -12,6 +12,8 @@ export default function CustomSeed({ seed, breakpoint, roundIndex }) {
 
   const Wrapper = isLineConnector ? SingleLineSeed : Seed;
 
+
+  console.log(seed);
   const startEditing = (team) => {
     setEditingTeam(team);
     setInputValue(team?.name || "");
