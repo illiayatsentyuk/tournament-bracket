@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Seed, SingleLineSeed, SeedItem, SeedTeam } from "react-brackets";
-import { rounds } from "../rounds/round";
+// import { rounds } from "../rounds/round";
 export default function CustomSeed({ seed, breakpoint, roundIndex }) {
   const [editingTeam, setEditingTeam] = useState(null);
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState(null);
   const [editingScore, setEditingScore] = useState(false);
-  const isLineConnector =
-    rounds[roundIndex].seeds.length === rounds[roundIndex + 1]?.seeds.length;
+  const isLineConnector = seed.teams.length === 0;
+
+  // Calculate number of rounds needed based on number of teams
+
 
   const Wrapper = isLineConnector ? SingleLineSeed : Seed;
 
@@ -21,6 +23,7 @@ export default function CustomSeed({ seed, breakpoint, roundIndex }) {
   };
 
   return (
+    <>
     <Wrapper mobileBreakpoint={breakpoint} style={{ fontSize: 12 }}>
       <SeedItem>
         <div>
@@ -107,5 +110,6 @@ export default function CustomSeed({ seed, breakpoint, roundIndex }) {
         </div>
       </SeedItem>
     </Wrapper>
+    </>
   );
 }

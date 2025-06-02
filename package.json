@@ -12,9 +12,10 @@
   },
   "dependencies": {
     "prettier": "^3.5.3",
-    "react": "^17.0.0",
+    "react": "^19.1.0",
     "react-brackets": "^0.4.7",
-    "react-dom": "^17.0.2"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
